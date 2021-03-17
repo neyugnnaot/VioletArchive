@@ -1,12 +1,40 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.12" />
-    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.12" />
+    <Compile Remove="Migrations\20210303185308_InitialCreate.cs" />
+    <Compile Remove="Migrations\20210303185308_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20210304153620_Users.cs" />
+    <Compile Remove="Migrations\20210304153620_Users.Designer.cs" />
+    <Compile Remove="Migrations\20210304154337_User.cs" />
+    <Compile Remove="Migrations\20210304154337_User.Designer.cs" />
+    <Compile Remove="Migrations\20210304155804_VioletArchive.cs" />
+    <Compile Remove="Migrations\20210304155804_VioletArchive.Designer.cs" />
+    <Compile Remove="Migrations\CommentDb\20210304153815_Comment.cs" />
+    <Compile Remove="Migrations\CommentDb\20210304153815_Comment.Designer.cs" />
+    <Compile Remove="Migrations\PostDb\20210304153543_Posts.cs" />
+    <Compile Remove="Migrations\PostDb\20210304153543_Posts.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\PostDb\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
 </Project>
